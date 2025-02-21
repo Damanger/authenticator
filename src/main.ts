@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // Habilitar CORS para permitir peticiones desde el frontend
   app.enableCors({
-    origin: 'http://localhost:5173', // Cambia al dominio del frontend en producción
+    origin: 'https://www.omar-cruz.com', // Cambia al dominio del frontend en producción
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Para enviar cookies si es necesario
   });
