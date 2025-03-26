@@ -4,7 +4,7 @@ import * as QRCode from 'qrcode';
 
 @Injectable()
 export class AuthService {
-    private users = new Map(); // Simulación de usuarios (usaría BD en producción)
+    private users = new Map();
 
     // Genera un secreto y el QR para el usuario
     async generate2FA(userId: string) {

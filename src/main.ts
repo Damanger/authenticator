@@ -1,14 +1,13 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AuthModule } from './auth/auth.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AuthModule);
 
-  // Habilitar CORS para permitir peticiones desde el frontend
   app.enableCors({
-    origin: 'https://www.omar-cruz.com', // Cambia al dominio del frontend en producción
+    origin: 'http://localhost:5173', //Se debe cambiar por la URL del frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Para enviar cookies si es necesario
+    credentials: true,
   });
 
   await app.listen(3000);
