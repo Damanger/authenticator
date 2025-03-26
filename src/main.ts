@@ -5,7 +5,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AuthModule);
 
   app.enableCors({
-    origin: 'http://localhost:5173', //Se debe cambiar por la URL del frontend
+    origin: 'https://www.omar-cruz.com', //Se debe cambiar por la URL del frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
